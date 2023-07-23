@@ -1,5 +1,5 @@
 // LG_D
-#define perto 40 //cm
+#define perto 48 //cm
 #define motorD OUT_A
 #define motorE OUT_C
 #define motorR OUT_B
@@ -17,9 +17,9 @@ task main() {
    SetSensorLowspeed(IN_1);
    SetSensorLowspeed(IN_2);
    Wait(5000);
-   OnRev(OUT_B,20);
+   OnRev(OUT_B,70);
    Wait(500);
-   Float(OUT_B);
+   OFF(OUT_B);
    while (true) {
      if(sensorE < perto && sensorD < perto)
      {
